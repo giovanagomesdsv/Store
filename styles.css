@@ -1,0 +1,84 @@
+/* seletor universal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: #0f0f1e;
+    color: #fff;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+header {
+    position: fixed;
+
+    /* 90% do tamanho da tela */
+    width: 90vw; 
+    top: 0;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* garante que fique sempre na frente de todos */
+    z-index: 3;
+}
+
+.logo{
+    font-family: "Orbitron", sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #00f7ff;
+
+    /* Deslocamento horizontal, Deslocamento vertical e Raio de desfoque (blur radius) */
+    text-shadow: 0 0 10px rgba(0, 247, 255, .5);
+}
+
+.header nav ul {
+    border: 50px solid rgb(255, 255, 255);
+    display: flex;
+
+    /* distanciamento entre os itens */
+    gap: 48px;
+}
+header nav ul li {
+    cursor: pointer;
+    position: relative;
+}
+
+/* position: relative
+Define que o elemento será posicionado em relação à sua posição original no fluxo da página.
+
+📘 Em outras palavras:
+Ele mantém o espaço onde estava, mas você pode movê-lo um pouco usando as propriedades:
+top, bottom, left, right. 
+
+position: absolute - sai do elemento pai, posso movimentá-lo para qualquer lugar da tela
+Faz o elemento sair completamente do fluxo normal da página, ou seja:
+ele não ocupa mais espaço — é como se “flutuasse” sobre os outros.
+
+se o pai tiver um position relative, o filho absolute vai ficar limitado ao pai. Poderei movimentar o filho em qualquer posição dentro do elemento pai.
+uso: top, bottom, left, right. 
+*/
+
+/* before TEXTO after */
+header nav ul li::after {
+    /* conteudo que aparecerá depois do item será vazio */
+    content: '';
+
+    /* esse é filho do 'header nav ul li'. Com absolute colocarei o elemento onde eu quiser na tela, mas está limitado ao pai pelo position relative */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00f7ff;
+}
+header nav ul li:hover::after {
+    width: 100%;
+}

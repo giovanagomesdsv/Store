@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+    <!-- https://fonts.google.com/ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
     <title>LumZys Store</title>
 </head>
+
 <body>
     <header>
         <div class="logo">LumZys Store</div>
@@ -34,10 +45,14 @@
                 <div class="content">
                     <p class="produt-tag">Novo Lançamento</p>
                     <p class="produt-name">Notebook Dell</p>
-                    <p class="description">Este notebook oferece o equilíbrio ideal entre desempenho e portabilidade, sendo a ferramenta perfeita para suas tarefas diárias, estudos e trabalho. Com um design elegante e leve, ele pode ser levado para qualquer lugar, garantindo produtividade e entretenimento onde você estiver.</p>
+                    <p class="description">Este notebook oferece o equilíbrio ideal entre desempenho e portabilidade,
+                        sendo a ferramenta perfeita para suas tarefas diárias, estudos e trabalho. Com um design
+                        elegante e leve, ele pode ser levado para qualquer lugar, garantindo produtividade e
+                        entretenimento onde você estiver.</p>
                     <button class="btn">Saiba mais</button>
                 </div>
             </div>
+
             <div class="item">
                 <div class="produt-img">
                     <img src="img/fone.png" alt="Imagem do fone">
@@ -45,24 +60,60 @@
                 <div class="content">
                     <p class="produt-tag">Novo Lançamento</p>
                     <p class="produt-name">Fone Gamer</p>
-                    <p class="description">Domine o campo de batalha com o Headset Gamer. Criado para proporcionar uma experiência de jogo imersiva e competitiva, este headset combina áudio de alta fidelidade, conforto excepcional e um microfone cristalino, permitindo que você ouça cada detalhe e se comunique com sua equipe de forma precisa.</p>
+                    <p class="description">Domine o campo de batalha com o Headset Gamer. Criado para proporcionar uma
+                        experiência de jogo imersiva e competitiva, este headset combina áudio de alta fidelidade,
+                        conforto excepcional e um microfone cristalino, permitindo que você ouça cada detalhe e se
+                        comunique com sua equipe de forma precisa.</p>
                     <button class="btn">Saiba mais</button>
                 </div>
             </div>
+
             <div class="item">
-               <div class="produt-img">
+                <div class="produt-img">
                     <img src="img/mouse.png" alt="Imagem do mouse">
                 </div>
                 <div class="content">
                     <p class="produt-tag">Novo Lançamento</p>
                     <p class="produt-name">Mouse Gamer</p>
-                    <p class="description">Prepare-se para dominar qualquer partida com o Mouse Gamer, a ferramenta definitiva para jogadores que buscam desempenho de elite. Combinando um design ergonômico com tecnologia de ponta, este mouse foi projetado para oferecer a velocidade, a precisão e a confiança que você precisa para vencer.</p>
+                    <p class="description">Prepare-se para dominar qualquer partida com o Mouse Gamer, a ferramenta
+                        definitiva para jogadores que buscam desempenho de elite. Combinando um design ergonômico com
+                        tecnologia de ponta, este mouse foi projetado para oferecer a velocidade, a precisão e a
+                        confiança que você precisa para vencer.</p>
                     <button class="btn">Saiba mais</button>
                 </div>
             </div>
         </div>
 
+        <!-- https://icons.getbootstrap.com/icons/arrow-right-circle/ -->
+        <div class="arrows">
+            <!-- antes -->
+            <button class="arrow-btn" id="prev">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
+                </svg>
+            </button>
+            <!-- depois -->
+            <button class="arrow-btn" id="next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="indicators">
+            <div class="numbers">01</div>
+            <div class="dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
     </main>
-    
+
 </body>
+
 </html>
